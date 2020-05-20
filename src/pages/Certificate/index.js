@@ -8,6 +8,8 @@ import './styles.css';
 function Certificate() {
   const name = localStorage.getItem("#user");
   const date = getCurrentDate();
+  const myWidth = window.innerWidth;
+  const myHeight = window.innerHeight;
 
   function getCurrentDate() {
     let dateObj = new Date()
@@ -17,6 +19,20 @@ function Certificate() {
       month: '2-digit',
       day: '2-digit',
     }).replace(/\//g, '/')
+  }
+
+  function getPositionName() {
+    if (myHeight <= 721) {
+      return '18%';
+    }
+    return '25%';
+  }
+
+  function getPositionDate() {
+    if (myWidth <= 1280) {
+      return '28%';
+    }
+    return '31%';
   }
 
   async function captureScreen() {
@@ -44,14 +60,14 @@ function Certificate() {
       }}>
         <h2 style={{
           fontSize: 40,
-          marginTop: '18%',
+          marginTop: getPositionName(),
           textAlign: 'center'
         }}> {name} </h2>
         <h2 style={{
           fontSize: 'large',
           position: 'absolute',
           bottom: '32%',
-          right: '28%',
+          right: getPositionDate(),
         }}> {date} </h2>
       </div>
 
