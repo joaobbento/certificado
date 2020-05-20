@@ -9,6 +9,14 @@ export default function Create() {
   const history = useHistory();
   const [user, setUser] = useState('');
   const [error, setError] = useState(false);
+  const myWidth = window.innerWidth;
+
+  function getPosition() {
+    if (myWidth <= 1280) {
+      return '0%';
+    }
+    return '-17%';
+  }
 
   async function handleCertificate(e) {
     e.preventDefault();
@@ -28,7 +36,7 @@ export default function Create() {
   return (
     <div className="logon-container">
       <section className="form">
-        <img src={logoImg} alt="Cosmeticos" />
+        <img src={logoImg} alt="Cosmeticos" style={{ marginLeft: getPosition() }} />
         <form onSubmit={handleCertificate}>
           <input
             placeholder="Digite o nome do Aluno"
