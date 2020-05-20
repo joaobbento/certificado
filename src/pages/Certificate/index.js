@@ -22,8 +22,10 @@ function Certificate() {
   }
 
   function getPositionName() {
-    if (myHeight <= 721) {
+    if (myHeight >= 400 && myHeight <= 722) {
       return '18%';
+    } else if (myHeight >= 723 && myHeight <= 900) {
+      return '20%';
     }
     return '25%';
   }
