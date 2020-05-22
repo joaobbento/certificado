@@ -39,20 +39,20 @@ function Certificate() {
 
   function dimensionWidth() {
     if (myWidth >= 1280 && myWidth <= 1340) {
-      alert(1)
+      //      alert(1)
       return {
         x: -48,
         w: 393
       };
     } else if (myWidth >= 1350 && myWidth <= 1600) {
-      alert(2)
+      //    alert(2)
 
       return {
         x: -52.5,
         w: 397
       };
     }
-    alert(3)
+    //   alert(3)
     return {
       x: -3,
       w: 299
