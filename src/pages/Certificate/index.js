@@ -25,7 +25,7 @@ function Certificate() {
     if (myHeight >= 400 && myHeight <= 722) {
       return '18%';
     } else if (myHeight >= 723 && myHeight <= 900) {
-      return '20%';
+      return '18%';
     }
     return '25%';
   }
@@ -35,6 +35,26 @@ function Certificate() {
       return '28%';
     }
     return '31%';
+  }
+
+  function dimensionWidth() {
+
+
+    if (myWidth >= 1280 && myWidth <= 1340) {
+      return {
+        x: -52.5,
+        w: 397
+      };
+    } else if (myWidth >= 1350 && myWidth <= 1600) {
+      return {
+        x: -48,
+        w: 393
+      };
+    }
+    return {
+      x: -3,
+      w: 299
+    };
   }
 
   async function captureScreen() {
@@ -48,7 +68,8 @@ function Certificate() {
     var doc = new jsPDF({
       orientation: 'landscape'
     })
-    doc.addImage(url, "PNG", -50, 1, 397, 208);
+
+    doc.addImage(url, "PNG", dimensionWidth().x, 1, dimensionWidth().w, 208);
 
     const certicate_name = name.split(' ').join('_');
     doc.save(`certificado_${certicate_name}.pdf`)
