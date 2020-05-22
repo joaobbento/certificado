@@ -38,19 +38,21 @@ function Certificate() {
   }
 
   function dimensionWidth() {
-
-
     if (myWidth >= 1280 && myWidth <= 1340) {
-      return {
-        x: -52.5,
-        w: 397
-      };
-    } else if (myWidth >= 1350 && myWidth <= 1600) {
+      alert(1)
       return {
         x: -48,
         w: 393
       };
+    } else if (myWidth >= 1350 && myWidth <= 1600) {
+      alert(2)
+
+      return {
+        x: -52.5,
+        w: 397
+      };
     }
+    alert(3)
     return {
       x: -3,
       w: 299
@@ -68,8 +70,8 @@ function Certificate() {
     var doc = new jsPDF({
       orientation: 'landscape'
     })
-
-    doc.addImage(url, "PNG", dimensionWidth().x, 1, dimensionWidth().w, 208);
+    const dimens = dimensionWidth();
+    doc.addImage(url, "PNG", dimens.x, 1, dimens.w, 208);
 
     const certicate_name = name.split(' ').join('_');
     doc.save(`certificado_${certicate_name}.pdf`)
@@ -95,7 +97,7 @@ function Certificate() {
       </div>
 
       <div className="button-container">
-        <button class="button" type="submit" onClick={captureScreen}>Salvar</button>
+        <button className="button" type="submit" onClick={captureScreen}>Salvar</button>
       </div>
 
     </div>

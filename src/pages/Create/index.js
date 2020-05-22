@@ -49,7 +49,7 @@ export default function Create() {
             }}
           />
           {error && <h4>É necessário preencher o nome do aluno!</h4>}
-          <button class="button" type="submit">Gerar Certificado</button>
+          <button className="button" type="submit">Gerar Certificado</button>
         </form>
       </section>
 
