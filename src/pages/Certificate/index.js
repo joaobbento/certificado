@@ -54,8 +54,8 @@ function Certificate() {
     }
     console.log('Aqui', myWidth)
     return {
-      x: -45,
-      w: 389
+      x: -40,
+      w: 377
     };
   }
 
