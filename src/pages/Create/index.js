@@ -12,10 +12,10 @@ export default function Create() {
   const myWidth = window.innerWidth;
 
   function getPosition() {
-    if (myWidth >= 1280 && myWidth <= 1400) {
+    if (myWidth >= 1280 && myWidth <= 1600) {
       return '0%';
     } else if (myWidth >= 1400 && myWidth <= 1600) {
-      return '-5%';
+      return '-1%';
     }
     return '-17%';
   }
