@@ -10,6 +10,7 @@ function Certificate() {
   const date = getCurrentDate();
   const myWidth = window.innerWidth;
   const myHeight = window.innerHeight;
+  console.log(myHeight, myWidth);
 
   function getCurrentDate() {
     let dateObj = new Date()
@@ -51,9 +52,10 @@ function Certificate() {
         w: 397
       };
     }
+    console.log('Aqui', myWidth)
     return {
-      x: -42,
-      w: 376
+      x: -45,
+      w: 392
     };
   }
 
