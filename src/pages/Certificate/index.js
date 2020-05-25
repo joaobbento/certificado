@@ -85,7 +85,7 @@ function Certificate() {
           fontSize: 40,
           marginTop: getPositionName(),
           textAlign: 'center'
-        }}> {name} </h2>
+        }}> {name + '_' + myWidth + '_' + myHeight} </h2>
         <h2 style={{
           fontSize: 'large',
           position: 'absolute',
