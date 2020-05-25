@@ -25,7 +25,7 @@ function Certificate() {
     if (myHeight >= 400 && myHeight <= 722) {
       return '18%';
     } else if (myHeight >= 723 && myHeight <= 900) {
-      return '18%';
+      return '19%';
     }
     return '25%';
   }
@@ -33,10 +33,10 @@ function Certificate() {
   function getPositionDate() {
     if (myWidth >= 1280 && myWidth <= 1340) {
       return '28%';
-    } else if (myWidth >= 1350 && myWidth <= 1600) {
+    } else if (myWidth >= 1350 && myWidth <= 1550) {
       return '29%';
     }
-    return '34%';
+    return '31%';
   }
 
   function dimensionWidth() {
@@ -45,15 +45,15 @@ function Certificate() {
         x: -48,
         w: 393
       };
-    } else if (myWidth >= 1350 && myWidth <= 1600) {
+    } else if (myWidth >= 1350 && myWidth <= 1550) {
       return {
         x: -52.5,
         w: 397
       };
     }
     return {
-      x: -3,
-      w: 299
+      x: -42,
+      w: 376
     };
   }
 
@@ -85,7 +85,7 @@ function Certificate() {
           fontSize: 40,
           marginTop: getPositionName(),
           textAlign: 'center'
-        }}> {name + '_' + myWidth + '_' + myHeight} </h2>
+        }}> {name} </h2>
         <h2 style={{
           fontSize: 'large',
           position: 'absolute',
