@@ -23,25 +23,67 @@ function Certificate() {
   }
 
   function getPositionName() {
-    if (myHeight >= 400 && myHeight <= 722) {
-      return '18%';
-    } else if (myHeight >= 723 && myHeight <= 900) {
+    if (myHeight === 757 && myWidth === 1600) {
+      console.log('getPositionName1');
       return '19%';
+    } else if (myHeight === 900 && myWidth === 1600) {
+      console.log('getPositionName2');
+      return '25%'
+    } else if (myHeight >= 400 && myHeight <= 722) {
+      console.log('getPositionName3');
+      return '18%';
+    } else if (myHeight >= 723 && myHeight <= 901) {
+      console.log('getPositionName4');
+      return '23%';
     }
-    return '25%';
   }
 
   function getPositionDate() {
-    if (myWidth >= 1280 && myWidth <= 1340) {
+    if (myHeight === 757 && myWidth === 1600) {
+      console.log('getPositionDate1');
+      return '31%';
+    } else if (myHeight === 900 && myWidth === 1600) {
+      console.log('getPositionDate2');
+      return '27%'
+    } else if (myWidth >= 1280 && myWidth <= 1340) {
+      console.log('getPositionDate3');
       return '28%';
     } else if (myWidth >= 1350 && myWidth <= 1550) {
+      console.log('getPositionDate4');
       return '29%';
     }
-    return '31%';
+  }
+
+  function getBottomDate() {
+    if (myHeight === 757 && myWidth === 1600) {
+      console.log('getBottomDate1');
+      return '32%';
+    } else if (myHeight === 900 && myWidth === 1600) {
+      console.log('getBottomDate2');
+      return '30%'
+    } else if (myWidth >= 1280 && myWidth <= 1340) {
+      console.log('getBottomDate3');
+      return '32%';
+    } else if (myWidth >= 1350 && myWidth <= 1550) {
+      console.log('getBottomDate4');
+      return '32%';
+    }
   }
 
   function dimensionWidth() {
-    if (myWidth >= 1280 && myWidth <= 1340) {
+    if (myHeight === 757 && myWidth === 1600) {
+      console.log('dimensionWidth1');
+      return {
+        x: -40,
+        w: 376
+      };
+    } else if (myHeight === 900 && myWidth === 1600) {
+      console.log('dimensionWidt2');
+      return {
+        x: -52.5,
+        w: 397
+      };
+    } else if (myWidth >= 1280 && myWidth <= 1340) {
       return {
         x: -48,
         w: 393
@@ -52,10 +94,9 @@ function Certificate() {
         w: 397
       };
     }
-    console.log('Aqui', myWidth)
     return {
-      x: -42,
-      w: 374
+      x: -4,
+      w: 305
     };
   }
 
@@ -91,7 +132,7 @@ function Certificate() {
         <h2 style={{
           fontSize: 'large',
           position: 'absolute',
-          bottom: '32%',
+          bottom: getBottomDate(),
           right: getPositionDate(),
         }}> {date} </h2>
       </div>
