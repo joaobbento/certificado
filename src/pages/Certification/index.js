@@ -38,12 +38,12 @@ const Certification = () => {
         }}>
           <View style={{
             top: 200,
-            right: '25%',
-            left: '25%',
+            right: '10%',
+            left: '10%',
             position: 'absolute',
           }}>
             <Text style={{
-              alignSelf: 'center', fontSize: 35, fontWeight: 'bold',
+              alignSelf: 'center', fontSize: 31, fontWeight: 'bold',
             }}>{name}</Text>
           </View>
 
