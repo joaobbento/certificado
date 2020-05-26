@@ -78,10 +78,10 @@ function Certificate() {
         w: 376
       };
     } else if (myHeight === 900 && myWidth === 1600) {
-      console.log('dimensionWidt2');
+      console.log('dimensionWidth2');
       return {
-        x: -52.5,
-        w: 397
+        x: -4,
+        w: 305
       };
     } else if (myWidth >= 1280 && myWidth <= 1340) {
       return {
