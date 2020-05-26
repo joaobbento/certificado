@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Certificate from './pages/Certificate';
+import Certification from './pages/Certification';
 import Create from './pages/Create';
 
 export default function Routes() {
@@ -9,7 +9,7 @@ export default function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Create} />
-        <Route path="/certificate" component={Certificate} />
+        <Route path="/certification" component={Certification} />
       </Switch>
     </BrowserRouter>
   )

@@ -28,7 +28,7 @@ export default function Create() {
     } else {
       try {
         localStorage.setItem('#user', user);
-        history.push('/certificate');
+        history.push('/certification');
       } catch (error) {
         alert("Falha no envio dos dados, tente novamente")
       }
